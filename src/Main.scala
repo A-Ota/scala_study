@@ -3,6 +3,8 @@
  */
 object Main {
   def main(args: Array[String]) = {
-    println("hello!")
+    Chapter01.run()
+    Chapter02.run()
+    Chapter03.run()
   }
 }
