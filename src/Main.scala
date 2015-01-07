@@ -6,5 +6,7 @@ object Main {
     Chapter01.run()
     Chapter02.run()
     Chapter03.run()
+    Chapter04.run()
+    Chapter05.run()
   }
 }
