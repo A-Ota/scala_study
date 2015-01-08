@@ -43,6 +43,45 @@ object Chapter07 {
       print(value + ",")
     println()
 
+    // if式は複数いける。偶数かつ10以上
+    for (value <- 1 to 20
+         if value % 2 == 0
+         if value >= 10)
+      printf(value + ",")
+    println()
+
+    // 入れ子もOK
+    val arr4 = Array[Array[String]](
+      Array("aaa", "bb", "ccccc"),
+      Array("d", "eee"),
+      Array("ff", "g", "hhhhh", "ii")
+    )
+    for (
+      // ここはセミコロンが必要
+      texts <- arr4;
+      text <- texts
+      if (text.length <= 3)
+    )
+      print(text + ",")
+    println()
+    for {
+    // 中括弧にするとセミコロン不要
+      texts <- arr4
+      text <- texts
+      if (text.length <= 3)
+    }
+      print(text + ",")
+    println()
+    for (
+      texts <- arr4;
+      text <- texts;
+      // text.lengthが凄い重い処理だとして、一時変数に代入してから処理する事ができる。
+      len = text.length
+      if (len <= 3)
+    )
+      print("len = %d,".format(len))
+    println()
+
     // yield(産出する)で左辺(を元に加工したもの)をリストとして取り出せる。
     val arr2 = for (value <- 1 to 3) yield value + 10
     arr2.foreach(n => print(n.toString + ","))
