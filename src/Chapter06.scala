@@ -3,7 +3,7 @@
  */
 object Chapter06 {
   def run(): Unit = {
-    println("\n===== Chapter05 =====\n")
+    println("\n===== Chapter06 =====\n")
 
     // 分数テスト
     println(new Rational(2, 4))
