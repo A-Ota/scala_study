@@ -16,5 +16,16 @@ object Chapter01 {
     val name2 = "fuGafUga"
     println("%s has uppercase? %b".format(name1, name1.exists(_.isUpper)))
     println("%s has uppercase? %b".format(name2, name2.exists(_.isUpper)))
+
+    // デフォルト引数
+    class MyClass2(var index: Int = 0, var name: String = "guest")
+    val cls3 = new MyClass2()
+    println("cls3(%d, %s)".format(cls3.index, cls3.name))
+
+    def func(num: Int = 10): Unit = {
+      println("num = %d".format(num))
+    }
+    func()
+    func(30)
   }
 }
