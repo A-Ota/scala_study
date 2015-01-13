@@ -1,3 +1,6 @@
+import java.io.File
+
+import scala.collection.immutable.Queue
 import scala.collection.mutable.ArrayBuffer
 
 /**
@@ -138,6 +141,13 @@ object Chapter08 {
     setNameAgeCountry(age = 40)
   }
   private def run5(): Unit = {
-    // TODO:末尾再起について
+    // 末尾再起
+    def doDequeue(queue : Queue[Int]): Unit = {
+      if (queue.isEmpty) return
+      val dequeued = queue.dequeue
+      println(dequeued._1)
+      doDequeue(dequeued._2)
+    }
+    doDequeue(Queue(1, 2, 3))
   }
 }
