@@ -11,5 +11,6 @@ object Main {
     Chapter06.run()
     Chapter07.run()
     Chapter08.run()
+    Chapter16.run()
   }
 }
